@@ -39,7 +39,7 @@ photoSelected: string  | ArrayBuffer;
       apellido: '',
       correo: '',
       contrasenia: '',
-      confirmacion: 'No Confirmado',
+      confirmacion: 'Confirmado',
       nac: '',
       pais: '',
       foto: 'uploads/default/notImage.jpg',
@@ -76,7 +76,7 @@ photoSelected: string  | ArrayBuffer;
   
   }
   
-  onPhotoSelected(event:HtmlInputEvent):void{
+  onPhotoSelected(event:any):void{
     if(event.target.files && event.target.files[0]) {
     this.file=<File>event.target.files[0];
     //imagen prev

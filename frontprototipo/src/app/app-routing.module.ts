@@ -8,7 +8,7 @@ import {ProductoMioComponent} from './components/producto-mio/producto-mio.compo
 import {DetalleComponent} from './components/detalle/detalle.component';
 import {RegistroClienteComponent} from './components/registro-cliente/registro-cliente.component';
 import {CarritoListaComponent} from './components/carrito-lista/carrito-lista.component';
-
+import {ReporteComponent} from './components/reporte/reporte.component';
 import {PerfilUpdateComponent} from './components/perfil-update/perfil-update.component';
 
 
@@ -61,7 +61,11 @@ const routes: Routes = [
   {
     path: 'update/:id',
     component: PerfilUpdateComponent
-    }
+  },
+  {
+  path: 'reporte/:id',
+  component: ReporteComponent
+  }
   
   
   

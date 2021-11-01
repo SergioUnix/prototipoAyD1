@@ -87,6 +87,7 @@ export class ProductoCrearComponent implements OnInit {
   updateProducto(){
 
     if(this.file==null){    console.log('si es null jaja');
+    console.log(this.producto)
 
     this.productosService.updateProducto(this.producto)
     .subscribe(
@@ -139,7 +140,7 @@ this.crearAccion(descripcion,tipo,usuario);
 
   
 
-onPhotoSelected(event:HtmlInputEvent):void{
+onPhotoSelected(event:any):void{
   if(event.target.files && event.target.files[0]) {
   this.file=<File>event.target.files[0];
   //imagen prev

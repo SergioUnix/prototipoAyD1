@@ -8,7 +8,7 @@
                 <i class="fas fa-backward"></i> Ir a Login
             </a>
 
-            <h2 class="text-center">   Registro de Usuario</h2>
+            <h2 class="text-center">   Registro de Estudiante</h2>
 
                    <div class="alert alert-warning" role="alert" *ngIf="isError"> 
                      Faltan campos por llenar
@@ -24,7 +24,7 @@
 
 
                 <label for="">Click en la imagen para elegir</label>
-                <input type="file" class="d-none"  #photoInput>
+                <input type="file" class="d-none" (change)="onPhotoSelected($event)" #photoInput>
                 <img [src]="photoSelected  || 'assets/notImage.jpg'" alt="No Image" class ="img-fluid mx-auto d-block rounded" (click)="photoInput.click()">
                 
                 

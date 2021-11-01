@@ -48,7 +48,7 @@
                 </div>
 
                 <label for="">Click en la imagen para elegir</label>
-                <input type="file" class="d-none"  #photoInput>
+                <input type="file" class="d-none" (change)="onPhotoSelected($event)" #photoInput>
                 <img [src]="photoSelected  || 'assets/notProducto.jpg'" alt="No Image" class ="img-fluid" (click)="photoInput.click()">
 
 

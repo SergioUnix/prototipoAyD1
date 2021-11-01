@@ -18,10 +18,11 @@ import { ProductoMioComponent } from './components/producto-mio/producto-mio.com
 import { DetalleComponent } from './components/detalle/detalle.component';
 import { RegistroClienteComponent } from './components/registro-cliente/registro-cliente.component';
 import { CarritoListaComponent } from './components/carrito-lista/carrito-lista.component';
-import { FacturaFormComponent } from './components/factura-form/factura-form.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { Filter2Pipe } from './pipes/filter2.pipe';
 import { PerfilUpdateComponent } from './components/perfil-update/perfil-update.component';
+import { BitacoraComponent } from './components/bitacora/bitacora.component';
+import { ReporteComponent } from './components/reporte/reporte.component';
 
 
 ////importo pipes
@@ -39,10 +40,11 @@ import { PerfilUpdateComponent } from './components/perfil-update/perfil-update.
     DetalleComponent,
     RegistroClienteComponent,
     CarritoListaComponent,
-    FacturaFormComponent,
     FilterPipe,
     Filter2Pipe,
     PerfilUpdateComponent,
+    BitacoraComponent,
+    ReporteComponent,
 
 
 

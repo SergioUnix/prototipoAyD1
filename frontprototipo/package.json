@@ -23,6 +23,8 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "bootswatch": "^5.1.3",
+    "pdfmake": "^0.2.2",
+    "pdfmake-wrapper": "^2.1.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

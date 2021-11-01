@@ -112,9 +112,11 @@ this.captoUsuario(params.id);
 
   ponerfecha(){
     this.fecha=new Date(this.usuario.nac);
+    console.log(this.fecha)
 
   //this.fecha.getFullYear()   //devuelve el año en cuatro cifras
   this.anio=this.fecha.getFullYear();
+  console.log(this.anio)
   
   // this.fecha.getMonth()   //Devuelve la representación interna del mes. OJO: 0 Enero - 11 Diciembre.
    this.mes=this.fecha.getMonth()+1;
@@ -132,7 +134,7 @@ this.captoUsuario(params.id);
 
 
 
-  onPhotoSelected(event:HtmlInputEvent):void{
+  onPhotoSelected(event:any):void{
     if(event.target.files && event.target.files[0]) {
     this.file=<File>event.target.files[0];
     //imagen prev

@@ -280,7 +280,7 @@ crearCompra(){
         
        await this.crearDetalle(cantidad.toString(),index.id_producto,respuesta.id_compra);
       let mensaje='Se ha comprado el producto con codigo '+index.id_producto+' con nombre: '+index.producto+' y detalle: '+index.detalle;
-       await this.enviarCorreoCompraVenta(index.correo,'Compra de Producto',mensaje);
+       //await this.enviarCorreoCompraVenta(index.correo,'Compra de Producto',mensaje);
        await this.sumarRestarCreditos(index.fk_usuario,'+',total.toString()); //Sumo los creditos a cada dueño del producto una vez hecha la compra
 
         i=i+3;
@@ -289,7 +289,7 @@ crearCompra(){
         let totalCreditos=Number(this.usuario.creditos)-this.totalCompra;
         let mensaje2='Se ha realizado una compra, \nel codigo de la compra es : '+respuesta.id_compra +' \nel valor gastado es : '+this.totalCompra+'\nCreditos que disponia ='+this.usuario.creditos+ '\n Creditos Actuales despues de la compra  ='+totalCreditos;
        
-        await this.enviarCorreoCompraVenta(this.usuario.correo,'Compra en SalesGT',mensaje2);
+        //await this.enviarCorreoCompraVenta(this.usuario.correo,'Compra en SalesGT',mensaje2);
         await this.quitarTodoCarrito();
         await this.sumarRestarCreditos(this.usuario.id_usuario.toString(),'-',this.totalCompra.toString()); ///resto el total de compra a los creditos actuales del que va a comprar
     //////////////////////////////////////////////////////////
@@ -308,18 +308,6 @@ crearCompra(){
   }
 
 
-  enviarCorreoCompraVenta(correo:string, asunto:string, mensaje:string){
-  
-    this.productosService.enviarCorreoCompraVenta(correo,asunto,mensaje).subscribe(  /// 
-      res => {
-      console.log("----------  correo enviado");
-      console.log(correo);
-      console.log(res);
-     },
-     err => console.error(err)
-     );
-  
-  }
 
 
   sumarRestarCreditos(id_usuario:string, operacion:string, creditos:string){

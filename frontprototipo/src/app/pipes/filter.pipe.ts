@@ -9,7 +9,7 @@ export class FilterPipe implements PipeTransform {
 
 const resultPosts =[];
 for(const post of value){
-if(post.palabras.indexOf(arg)> -1){
+if(post.producto.indexOf(arg)> -1){
 resultPosts.push(post);
 
 };
